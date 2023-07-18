@@ -70,13 +70,16 @@ mkdir Data/Session
 train_task1.py
 to get the model which train task1
 <br>
+
 ~~~
 python train_task1.py --epochs 10 --lr 0.001 --batch 32
 ~~~
+
 - Then run other tasks by
 ~~~
 sh ttl_train.sh
 ~~~
+
 <!-- 
 
 <br>
