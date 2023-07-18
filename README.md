@@ -15,8 +15,14 @@ be automatically generated when running task1.
 More specifically, if you run the dataset for task1, the data_loader generate index.csv for all items in task1.
 
 ---
-For your own coustume dataset, make format like <br>
-$[Source (input) Sequence]$ ,, $[targets]$
+For your own custom dataset, format it as follows: <br>
+"[Source (input) Sequence (seperator: ,)]" ,, "[targets]" <br>
+For e.g.,<br>
+0,0,0,0,0,0,1,2,3,4,,2,3,4<br>
+0,0,0,0,0,1,2,5,7,3,,8<br>
+0,0,0,5,6,7,2,2,4,5,,10<br>
+0,0,0,0,0,8,9,3,4,4,,20<br>
+Please refer to the example datasets in the "example" folder.
 
 ## How to Run
 First run the task 1
@@ -39,31 +45,31 @@ python train_teracon.py --epochs 100 --lr 0.001 --batch 1024 --datapath "the dat
 E.g., if train the tasks of TTL in the paper, learn sequentially<br>
 
 ~~~
-python train_teracon.py --lr 0.0001 --smax 50 --batch 1024 --datapath "./Data/ColdRec/original_desen_finetune_click_nosuerID.csv' --datapath_index "./Data/Session/index.csv" --paths "./saved_models/task1.t7" --savepath "./saved_models/task2" --n_tasks 2
+python train_teracon.py --lr 0.0001 --smax 50 --batch 1024 --datapath "./ColdRec/original_desen_finetune_click_nosuerID.csv' --datapath_index "./Data/Session/index.csv" --paths "./saved_models/task1.t7" --savepath "./saved_models/task2" --n_tasks 2
 ~~~
 
 <br>
 
 ~~~
-python train_teracon.py --lr 0.0001 --smax 50 --batch 1024 --datapath "./Data/ColdRec/original_desen_finetune_like_nosuerID.csv' --datapath_index "./Data/Session/index.csv" --paths "./saved_models/task2.t7" --savepath "./saved_models/task3" --n_tasks 3
+python train_teracon.py --lr 0.0001 --smax 50 --batch 1024 --datapath "./ColdRec/original_desen_finetune_like_nosuerID.csv' --datapath_index "./Data/Session/index.csv" --paths "./saved_models/task2.t7" --savepath "./saved_models/task3" --n_tasks 3
 ~~~
 
 <br>
 
 ~~~
-python train_teracon.py --lr 0.0001 --smax 50 --batch 1024 --datapath "./Data/ColdRec/original_desen_age.csv' --datapath_index "./Data/Session/index.csv" --paths "./saved_models/task3.t7" --savepath "./saved_models/task4" --n_tasks 4
+python train_teracon.py --lr 0.0001 --smax 50 --batch 1024 --datapath "./ColdRec/original_desen_age.csv' --datapath_index "./Data/Session/index.csv" --paths "./saved_models/task3.t7" --savepath "./saved_models/task4" --n_tasks 4
 ~~~
 
 <br>
 
 ~~~
-python train_teracon.py --lr 0.0001 --smax 50 --batch 1024 --datapath "./Data/ColdRec/original_desen_gender.csv' --datapath_index "./Data/Session/index.csv" --paths "./saved_models/task4.t7" --savepath "./saved_models/task5" --n_tasks 5
+python train_teracon.py --lr 0.0001 --smax 50 --batch 1024 --datapath "./ColdRec/original_desen_gender.csv' --datapath_index "./Data/Session/index.csv" --paths "./saved_models/task4.t7" --savepath "./saved_models/task5" --n_tasks 5
 ~~~
 
 <br>
 
 ~~~
-python train_teracon.py --lr 0.0001 --smax 50 --batch 1024 --datapath "./Data/ColdRec/original_desen_lifestatus.csv' --datapath_index "./Data/Session/index.csv" --paths "./saved_models/task5.t7" --savepath "./saved_models/task6" --n_tasks 6
+python train_teracon.py --lr 0.0001 --smax 50 --batch 1024 --datapath "./ColdRec/original_desen_lifestatus.csv' --datapath_index "./Data/Session/index.csv" --paths "./saved_models/task5.t7" --savepath "./saved_models/task6" --n_tasks 6
 ~~~
 
 ---
@@ -72,7 +78,7 @@ To inference past tasks using current model, use inference_past_tasks.py
 E.g., if train the tasks of TTL in the paper from task 1 to task 5, then inference the model about task 4.
 
 ~~~
-python inference_past_tasks.py --datapath "./Data/ColdRec/original_desen_age.csv' --datapath_index "./Data/Session/index.csv" --paths "./saved_models/task5.t7" --n_tasks 5 --inference_task 4
+python inference_past_tasks.py --datapath "./ColdRec/original_desen_age.csv' --datapath_index "./Data/Session/index.csv" --paths "./saved_models/task5.t7" --n_tasks 5 --inference_task 4
 ~~~
 
 ## Backbone network Code
