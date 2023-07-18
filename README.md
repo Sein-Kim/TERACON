@@ -25,7 +25,8 @@ For e.g.,<br>
 Please refer to the example datasets in the "example" folder.
 
 ## Arguments
-'datapath_index', i.e., "Data/session/index.csv"
+
+<code>datapath_index</code>, i.e., "Data/session/index.csv"
 is automatically generated when running task1.
 More specifically, if you run the dataset for task1, the data_loader generates index.csv for all items in task1.
 
