@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import data_loader as data_loader
-import tracon as generator_recsys
+import teracon as generator_recsys
 
 import math
 import numpy as np
