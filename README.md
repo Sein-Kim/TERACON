@@ -95,14 +95,11 @@ python inference_past_tasks.py --datapath "./ColdRec/original_desen_age.csv' --d
 ~~~
 
 ## Backbone network Code
-The data_loder code and basic backbone network are refered to<br>
+- The data_loder code and basic backbone network are refered to<br>
 
-https://github.com/yuangh-x/2022-NIPS-Tenrec
+  - https://github.com/yuangh-x/2022-NIPS-Tenrec
 
-https://github.com/syiswell/NextItNet-Pytorch
-
----
-This code is fitted to TTL data set, if you run the ML datasets please change the paths of data
+  - https://github.com/syiswell/NextItNet-Pytorch
 
 ### Cite (Bibtex)
 - Please refer the following paer, if you find TERACON useful in your research:
