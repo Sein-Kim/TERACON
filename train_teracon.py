@@ -37,7 +37,7 @@ def main():
                         help='Seed')
     parser.add_argument('--lr', type = float, default=0.0001,
                         help='Learning rate')
-    parser.add_argument('--datapath', type=str, default='./Data/ColdRec/original_desen_finetune_like_nouserID.csv',
+    parser.add_argument('--datapath', type=str, default='./ColdRec/original_desen_finetune_like_nouserID.csv',
                         help='data path')
     parser.add_argument('--datapath_index', type=str, default='Data/Session/index.csv',
                         help='item index dictionary path')
