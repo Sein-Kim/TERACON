@@ -8,16 +8,11 @@ User modeling, which learns to represent users into a low-dimensional representa
 
 ## Dataset
 
-You can download the datasets from this url from [CONURE](https://arxiv.org/abs/2009.13724)<br>
+- You can download the datasets from this url from [CONURE](https://arxiv.org/abs/2009.13724)<br>
 
-TTL: https://drive.google.com/file/d/1imhHUsivh6oMEtEW-RwVc4OsDqn-xOaP/view<br>
+  - TTL: https://drive.google.com/file/d/1imhHUsivh6oMEtEW-RwVc4OsDqn-xOaP/view<br>
 
-MovieLens: https://grouplens.org/datasets/movielens/25m/
-
----
-The datapath_index "Data/session/index.csv"
-be automatically generated when running task1.
-More specifically, if you run the dataset for task1, the data_loader generate index.csv for all items in task1.
+  - MovieLens: https://grouplens.org/datasets/movielens/25m/
 
 ---
 For your own custom dataset, format it as follows: <br>
@@ -28,6 +23,13 @@ For e.g.,<br>
 0,0,0,5,6,7,2,2,4,5,,10<br>
 0,0,0,0,0,8,9,3,4,4,,20<br>
 Please refer to the example datasets in the "example" folder.
+
+## Arguments
+'datapath_index', i.e., "Data/session/index.csv"
+is automatically generated when running task1.
+More specifically, if you run the dataset for task1, the data_loader generates index.csv for all items in task1.
+
+
 
 ## How to Run
 First run the task 1
