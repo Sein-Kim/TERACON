@@ -25,6 +25,11 @@ For e.g.,<br>
 Please refer to the example datasets in the "example" folder.
 
 ## Arguments
+<code>datdapath</code>, is the path of current train data.
+
+<code>paths</code>, is the path of previous task model.
+
+<code>n_tasks</code>, the total number of tasks
 
 <code>datapath_index</code>, i.e., "Data/session/index.csv"
 is automatically generated when running task1.
