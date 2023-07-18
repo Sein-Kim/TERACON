@@ -110,7 +110,7 @@ python train_teracon.py --lr 0.0001 --smax 50 --batch 1024 --datapath "./ColdRec
 python train_teracon.py --lr 0.0001 --smax 50 --batch 1024 --datapath "./ColdRec/original_desen_lifestatus.csv' --datapath_index "./Data/Session/index.csv" --paths "./saved_models/task5.t7" --savepath "./saved_models/task6" --n_tasks 6
 ~~~
 -->
-To inference past tasks using current model, use inference_past_tasks.py
+- To inference past tasks using current model, use inference_past_tasks.py
 <br>
 E.g., if train the tasks of TTL in the paper from task 1 to task 5, then inference the model about task 4.
 ~~~
