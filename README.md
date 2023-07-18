@@ -34,14 +34,25 @@ usage example :`--dataset ./ColdRec/original_desen_finetune_click_nosuerID.csv`
 `--paths:`, is the path of previous task model.<br>
 usage example :`--paths ./saved_models/task1.t7`
 
-`--n_tasks`, the total number of tasks.<br>
+`--savepath`, is the save path of current model.<br>
+usage example : `--savepath ./saved_models/task2.t7`
+
+`--n_tasks:`, the total number of tasks.<br>
 usage example :`--n_tasks 2`
 
-`--datapath_index`, path of item index dictionary (i.e., `Data/Session/index.csv`).<br>
+`--datapath_index:`, path of item index dictionary (i.e., `Data/Session/index.csv`).<br>
 usage example :`--datapath_index Data/Session/index.csv`
 - Note that, the file `index.csv` is automatically generated when running task1.
 More specifically, if you run the dataset for task1, the data_loader generates index.csv for all items in task1.<br>
 
+`--lr:`, learning rate of model.<br>
+usage example : `--lr 0.0001`
+
+`--alpha:`, controls the contribution of the knowledge retention.<br>
+usage example : `--alpha 0.7`
+
+`--smax:`, positive scaling hyper-parameter.<br>
+usage example : `--smax 50`
 
 
 ## How to Run
@@ -59,18 +70,15 @@ mkdir Data/Session
 train_task1.py
 to get the model which train task1
 <br>
-
 ~~~
 python train_task1.py --epochs 10 --lr 0.001 --batch 32
 ~~~
-
----
-Then run other tasks by
-
+- Then run other tasks by
 ~~~
 sh ttl_train.sh
 ~~~
 <!-- 
+
 <br>
 E.g., if train the tasks of TTL in the paper, learn sequentially<br>
 
@@ -109,7 +117,8 @@ E.g., if train the tasks of TTL in the paper from task 1 to task 5, then inferen
 
 ~~~
 python inference_past_tasks.py --datapath "./ColdRec/original_desen_age.csv' --datapath_index "./Data/Session/index.csv" --paths "./saved_models/task5.t7" --n_tasks 5 --inference_task 4
-~~~ -->
+~~~ 
+-->
 
 ## Backbone network Code
 - The data_loder code and basic backbone network are refered to<br>
