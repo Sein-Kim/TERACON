@@ -16,42 +16,43 @@ User modeling, which learns to represent users into a low-dimensional representa
 
   - MovieLens: https://grouplens.org/datasets/movielens/25m/
 
----
-For your own custom dataset, format it as follows: <br>
-"[Source (input) Sequence (seperator: ,)]" ,, "[targets]" <br>
-For e.g.,<br>
-0,0,0,0,0,0,1,2,3,4,,2,3,4<br>
-0,0,0,0,0,1,2,5,7,3,,8<br>
-0,0,0,5,6,7,2,2,4,5,,10<br>
-0,0,0,0,0,8,9,3,4,4,,20<br>
-Please refer to the example datasets in the "example" folder.
+- For your own custom dataset, format it as follows: <br>
+  - "Input Sequence" ,, "Targets" <br>
+  - For e.g.,<br>
+    ~~~
+    0,0,0,0,0,0,1,2,3,4,,2,3,4
+    0,0,0,0,0,1,2,5,7,3,,8
+    0,0,0,5,6,7,2,2,4,5,,10
+    0,0,0,0,0,8,9,3,4,4,,20
+    ~~~
+  - Please refer to the example datasets in the `example` folder.
 
 ## Hyperparameters
 
-`--datapath:`, is the path of current train data.<br>
+`--datapath:` Path of dataset.<br>
 usage example :`--dataset ./ColdRec/original_desen_finetune_click_nosuerID.csv`
 
-`--paths:`, is the path of previous task model.<br>
+`--paths:` Path of previous task model.<br>
 usage example :`--paths ./saved_models/task1.t7`
 
-`--savepath`, is the save path of current model.<br>
+`--savepath` Storage path of current model.<br>
 usage example : `--savepath ./saved_models/task2.t7`
 
-`--n_tasks:`, the total number of tasks.<br>
+`--n_tasks:`  Total number of the tasks.<br>
 usage example :`--n_tasks 2`
 
-`--datapath_index:`, path of item index dictionary (i.e., `Data/Session/index.csv`).<br>
+`--datapath_index:` Path of item index dictionary (i.e., `Data/Session/index.csv`).<br>
 usage example :`--datapath_index Data/Session/index.csv`
-- Note that, the file `index.csv` is automatically generated when running task1.
-More specifically, if you run the dataset for task1, the data_loader generates index.csv for all items in task1.<br>
+- Note that, the file `index.csv` is automatically generated when running Task 1.
+Specifically, when running the dataset for Task 1, the `data_loader` generates the `index.csv` file, which contains the index information for all items in Task 1.<br>
 
-`--lr:`, learning rate of model.<br>
+`--lr:` Learning rate of model.<br>
 usage example : `--lr 0.0001`
 
-`--alpha:`, controls the contribution of the knowledge retention.<br>
+`--alpha:` Controls the contribution of the knowledge retention.<br>
 usage example : `--alpha 0.7`
 
-`--smax:`, positive scaling hyper-parameter.<br>
+`--smax:` Positive scaling hyper-parameter.<br>
 usage example : `--smax 50`
 
 
@@ -66,14 +67,14 @@ mkdir Data/Session
 
 - Download `TTL` data from [here](https://drive.google.com/file/d/1imhHUsivh6oMEtEW-RwVc4OsDqn-xOaP/view) to `ColdRec`.
 - To train the model for Task 1, please run the `train_task1.py`.
-~~~
-python train_task1.py --epochs 10 --lr 0.001 --batch 32
-~~~
+  ~~~
+  python train_task1.py --epochs 10 --lr 0.001 --batch 32
+  ~~~
 
 - Then run other tasks by
-~~~
-sh ttl_train.sh
-~~~
+  ~~~
+  sh ttl_train.sh
+  ~~~
 
 <!-- 
 
@@ -110,9 +111,9 @@ python train_teracon.py --lr 0.0001 --smax 50 --batch 1024 --datapath "./ColdRec
 -->
 - To perform inference on past tasks using the current model, please run the `inference_past_tasks.py`.
   - As an example, if you have trained up to Task 5 using the TTL dataset, run the following `ttl_inference.sh` to proceed with the inference on past tasks:
-~~~
-sh ttl_inference.sh
-~~~ 
+    ~~~
+    sh ttl_inference.sh
+    ~~~ 
 
 
 ## Backbone network Code
