@@ -17,7 +17,7 @@ User modeling, which learns to represent users into a low-dimensional representa
   - MovieLens: https://grouplens.org/datasets/movielens/25m/
 
 - For your own custom dataset, format it as follows: <br>
-  - "Input Sequence" ,, "Targets" <br>
+  - Format: `Input Sequence` `,,` `"Targets"` <br>
   - For e.g.,<br>
     ~~~
     0,0,0,0,0,0,1,2,3,4,,2,3,4
