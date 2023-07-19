@@ -120,7 +120,7 @@ python train_teracon.py --lr 0.0001 --smax 50 --batch 1024 --datapath "./ColdRec
 
 
 ## Backbone network Code
-- The data_loder code and basic backbone network are refered to<br>
+- The code for the backbone network is referenced from:
 
   - https://github.com/yuangh-x/2022-NIPS-Tenrec
 
