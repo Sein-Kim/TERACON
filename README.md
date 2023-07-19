@@ -65,9 +65,7 @@ mkdir Data/Session
 ~~~
 
 - Download `TTL` data from [here](https://drive.google.com/file/d/1imhHUsivh6oMEtEW-RwVc4OsDqn-xOaP/view) to `ColdRec`.
-- First run the task 1
-train_task1.py
-to get the model which train task1
+- To train the model for Task 1, please run the `train_task1.py`.
 ~~~
 python train_task1.py --epochs 10 --lr 0.001 --batch 32
 ~~~
@@ -110,10 +108,10 @@ python train_teracon.py --lr 0.0001 --smax 50 --batch 1024 --datapath "./ColdRec
 python train_teracon.py --lr 0.0001 --smax 50 --batch 1024 --datapath "./ColdRec/original_desen_lifestatus.csv' --datapath_index "./Data/Session/index.csv" --paths "./saved_models/task5.t7" --savepath "./saved_models/task6" --n_tasks 6
 ~~~
 -->
-- To inference past tasks using current model, use inference_past_tasks.py
-  - E.g., if train the tasks of TTL in the paper from task 1 to task 5, then inference the model about task 4.
+- To perform inference on past tasks using the current model, please run the `inference_past_tasks.py`.
+  - As an example, if you have trained up to Task 5 using the TTL dataset, run the following `ttl_inference.sh` to proceed with the inference on past tasks:
 ~~~
-python inference_past_tasks.py --datapath "./ColdRec/original_desen_age.csv' --datapath_index "./Data/Session/index.csv" --paths "./saved_models/task5.t7" --n_tasks 5 --inference_task 4
+sh ttl_inference.sh
 ~~~ 
 
 
