@@ -239,7 +239,7 @@ class NextItNet_Decoder(nn.Module):
         
         """Construct the classication layer for each tasks (current task and past tasks)."""
         self.task_classifier = nn.ModuleList([nn.Linear(self.residual_channels, self.target_size[n]) for n in range(self.num_task)])
-        # for i in range(self.num_task): # Initialize the task relation aware mlp
+        # for i in range(self.num_task): # Initialize the classifier
         #     self.task_classifier[i].weight.data.normal_(0.0,0.01)
         #     self.task_classifier[i].bias.data.fill_(0.1)
         

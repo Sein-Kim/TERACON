@@ -55,6 +55,9 @@ usage example : `--alpha 0.7`
 `--smax:` Positive scaling hyper-parameter.<br>
 usage example : `--smax 50`
 
+## Requirments
+- Pytorch version: 1.7.1
+- Numpy version: 1.19.2
 
 ## How to Run
 
