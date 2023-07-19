@@ -126,7 +126,7 @@ python train_teracon.py --lr 0.0001 --smax 50 --batch 1024 --datapath "./ColdRec
 
   - https://github.com/syiswell/NextItNet-Pytorch
 
-### Cite (Bibtex)
+## Cite (Bibtex)
 - Please refer the following paer, if you find TERACON useful in your research:
   - Kim, Sein and Lee, Namkyeong and Kim, Donghyun and Yang, Minchul and Park, Chanyoung. "Task Relation-aware Continual User Representation Learning." KDD 2023.
   - Bibtex
