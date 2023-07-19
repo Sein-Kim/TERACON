@@ -17,7 +17,7 @@ User modeling, which learns to represent users into a low-dimensional representa
   - MovieLens: https://grouplens.org/datasets/movielens/25m/
 
 - For your own custom dataset, format it as follows: <br>
-  - Format: `Input Sequence` `,,` `"Targets"` <br>
+  - Format: `Input Sequence` `,,` `Targets` <br>
   - For e.g.,<br>
     ~~~
     0,0,0,0,0,0,1,2,3,4,,2,3,4
@@ -36,7 +36,7 @@ usage example :`--dataset ./ColdRec/original_desen_finetune_click_nosuerID.csv`
 usage example :`--paths ./saved_models/task1.t7`
 
 `--savepath` Storage path of current model.<br>
-usage example : `--savepath ./saved_models/task2.t7`
+usage example : `--savepath ./saved_models/task2`
 
 `--n_tasks:`  Total number of the tasks.<br>
 usage example :`--n_tasks 2`
