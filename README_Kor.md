@@ -7,7 +7,7 @@ User modeling, which learns to represent users into a low-dimensional representa
 - 논문에서 사용된 Dataset (`TTL` and `Movielens`)은 다음 링크에서 다운로드 할 수 있습니다. (taken from [CONURE](https://arxiv.org/abs/2009.13724))<br>
   - `TTL`: https://drive.google.com/file/d/1imhHUsivh6oMEtEW-RwVc4OsDqn-xOaP/view<br>
   - `MovieLens`: https://grouplens.org/datasets/movielens/25m/
-- 위의 Dataset이 아닌, 다른 Dataset을 사용할 경우 다음 format 을 맞추어 사용하십시오: <br>
+- 위의 Dataset 이 아닌, 다른 Dataset 을 사용할 경우 다음 format 을 맞추어 사용하십시오: <br>
   - Format: `Input Sequence` `,,` `Targets` <br>
   - For e.g.,<br>
     ~~~
@@ -43,7 +43,7 @@ mkdir -p saved_model Data/Session ColdRec
 ## Arguments
 - `--datapath:` Dataset 의 경로.<br>
 	- usage example :`--dataset ./ColdRec/original_desen_finetune_click_nosuerID.csv`
-- `--paths:` 이전 Task 를 학습한 모델의 경로 .<br>
+- `--paths:` 이전 Task 를 학습한 모델의 경로.<br>
 	- usage example :`--paths ./saved_models/task1.t7`
 - `--savepath:` 현재 모델을 저장할 경로.<br>
 	- usage example : `--savepath ./saved_models/task2`
