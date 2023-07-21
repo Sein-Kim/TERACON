@@ -36,7 +36,7 @@ mkdir -p saved_model Data/Session ColdRec
   sh ttl_train.sh
   ~~~
 - 과거 Task 에 대한 inference 를 진행하기 위해서, `inference_past_task.py` 를 실행하십시오.
-  - 만약, `TTL` datasset 을 사용하여 Task 1 부터 Task 5 까지 학습한 이후, inference 를 진행한다면, 다음 script 를 실행하십시오:
+  - 만약, `TTL` datasset 을 사용하여 Task 1 부터 Task 5 까지 학습한 이후 inference 를 진행한다면, 다음 script 를 실행하십시오:
     ~~~
     sh ttl_inference.sh
     ~~~
