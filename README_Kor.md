@@ -45,7 +45,7 @@ mkdir -p saved_model Data/Session ColdRec
 	- usage example :`--dataset ./ColdRec/original_desen_finetune_click_nosuerID.csv`
 - `--paths:` 이전 Task 를 학습한 모델의 경로 .<br>
 	- usage example :`--paths ./saved_models/task1.t7`
-- `--savepath` 현재 모델을 저장할 경로.<br>
+- `--savepath:` 현재 모델을 저장할 경로.<br>
 	- usage example : `--savepath ./saved_models/task2`
 - `--n_tasks:`  Task 의 총 개수.<br>
 	- usage example :`--n_tasks 2`
@@ -55,7 +55,7 @@ mkdir -p saved_model Data/Session ColdRec
   모델이 `Task 1` 을 학습할 때, `data_loader` 에서 Task 1 의 모든 item 의 index 정보를 가지고 있는 `index.csv` 를 생성합니다.<br>
 - `--lr:` Learning rate.<br>
 	- usage example : `--lr 0.0001`
-- `--alpha:`: Knowledge retention 의 강도를 조절하는 hyper parameter.<br>
+- `--alpha:` Knowledge retention 의 강도를 조절하는 hyper parameter.<br>
 	- usage example : `--alpha 0.7`
 - `--smax:` Positive scaling 을 설정하는 hyper-parameter.<br>
 	- usage example : `--smax 50`

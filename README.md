@@ -45,7 +45,7 @@ mkdir -p saved_model Data/Session ColdRec
 	- usage example :`--dataset ./ColdRec/original_desen_finetune_click_nosuerID.csv`
 - `--paths:` Path of the model trained on a previous task.<br>
 	- usage example :`--paths ./saved_models/task1.t7`
-- `--savepath` Path to which the current model is saved.<br>
+- `--savepath:` Path to which the current model is saved.<br>
 	- usage example : `--savepath ./saved_models/task2`
 - `--n_tasks:`  Total number of the tasks.<br>
 	- usage example :`--n_tasks 2`
