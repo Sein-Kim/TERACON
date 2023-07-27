@@ -29,7 +29,7 @@ mkdir -p saved_models Data/Session ColdRec
 - Download `TTL` data from [here](https://drive.google.com/file/d/1imhHUsivh6oMEtEW-RwVc4OsDqn-xOaP/view) and upload it to `ColdRec` folder.
 - To train the model on Task 1, run `train_task1.py` as follows:
   ~~~
-  python train_task1.py --epochs 10 --lr 0.001 --batch 32
+  python train_task1.py --epochs 10 --lr 0.001
   ~~~
 - Then, run subsequent tasks by executing the following script:
   ~~~

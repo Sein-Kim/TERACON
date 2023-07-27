@@ -33,7 +33,7 @@ def main():
                         help='Save path of current model')
     parser.add_argument('--paths', type=str, default='./saved_models/task1.t7',
                         help='Load path of past model')
-    parser.add_argument('--seed', type=int, default = 10,
+    parser.add_argument('--seed', type=int, default = 0,
                         help='Seed')
     parser.add_argument('--lr', type = float, default=0.0001,
                         help='Learning rate')
