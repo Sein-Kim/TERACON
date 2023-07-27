@@ -24,7 +24,7 @@ User modeling, which learns to represent users into a low-dimensional representa
 ~~~
 git clone https://github.com/Sein-Kim/TERACON_Revised.git
 cd TERACON_Revised
-mkdir -p saved_model Data/Session ColdRec
+mkdir -p saved_models Data/Session ColdRec
 ~~~
 - Download `TTL` data from [here](https://drive.google.com/file/d/1imhHUsivh6oMEtEW-RwVc4OsDqn-xOaP/view) and upload it to `ColdRec` folder.
 - To train the model on Task 1, run `train_task1.py` as follows:
