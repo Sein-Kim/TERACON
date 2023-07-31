@@ -27,7 +27,7 @@ def main():
                         help='Regularization of masks (if needed)')
     parser.add_argument('--savepath',type=str, default='./saved_models/task1',
                         help='Save path of current model')
-    parser.add_argument('--seed', type=int, default = 10,
+    parser.add_argument('--seed', type=int, default = 0,
                         help='Seed')
     parser.add_argument('--lr', type = float, default=0.001,
                         help='Learning rate')
