@@ -24,8 +24,8 @@ User modeling, which learns to represent users into a low-dimensional representa
 - Numpy version: 1.19.2
 ## How to Run
 ~~~
-git clone https://github.com/Sein-Kim/TERACON_Revised.git
-cd TERACON_Revised
+git clone https://github.com/Sein-Kim/TERACON.git
+cd TERACON
 mkdir -p saved_models Data/Session ColdRec
 ~~~
 - Download `TTL` data from [here](https://drive.google.com/file/d/1imhHUsivh6oMEtEW-RwVc4OsDqn-xOaP/view) and upload it to `ColdRec` folder.
