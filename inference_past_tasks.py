@@ -69,8 +69,8 @@ def main():
         items = dl.item_dict
         print("len(source)",len(items)) # The number of items.
         targets_ = dl.target_dict
-        targets_len_ = len(targets_) #The number of targets.
-        print('len(target)', targets_len_)
+        targets_len_ = len(targets_) 
+        print('len(target)', targets_len_) #The number of targets.
         all_samples = dl.example
         print('len(all_samples)',len(all_samples))
     else:
